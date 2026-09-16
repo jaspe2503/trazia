@@ -402,6 +402,14 @@ img {
     flex-wrap: wrap;
     margin-top: 14px;
 }
+/* Corrección de imagen de fondo para celulares */
+@media (max-width: 768px) {
+    .hero, .carousel, .hero-slide {
+        background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+}
 
 /* ------------------ 3. EL ORIGEN TIENE ROSTRO ------------------ */
 .rostro-grid {
@@ -1067,3 +1075,4 @@ img {
         text-align: center;
     }
 }
+
