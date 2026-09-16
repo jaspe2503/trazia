@@ -1075,4 +1075,15 @@ img {
         text-align: center;
     }
 }
+/* --- DESTELLO PARA DESTACAR EL LOGO EN EL FOOTER --- */
+.footer-logo-img {
+    /* Convierte el logo a blanco y le añade un resplandor dorado sutil */
+    filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(201, 169, 107, 0.7)) !important;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
 
+/* Al pasar el cursor por encima, el destello aumenta suavemente */
+.footer-logo-img:hover {
+    filter: brightness(0) invert(1) drop-shadow(0 0 16px rgba(255, 255, 255, 0.9)) !important;
+    transform: scale(1.02);
+}
