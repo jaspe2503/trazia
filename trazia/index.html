@@ -20,38 +20,38 @@
 <body>
 
     <!-- 1. HEADER & NAVEGACIÓN -->
-<header class="navbar" id="navbar">
-    <div class="container nav-container">
-        <!-- Logo empujado a la izquierda -->
-        <a href="#inicio" class="nav-brand" aria-label="TRAZIA - Every origin has a story">
-            <img src="images/Trazia_.svg" alt="TRAZIA Logo" class="nav-logo-img">
-        </a>
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Logo empujado a la izquierda -->
+            <a href="#inicio" class="nav-brand" aria-label="TRAZIA - Every origin has a story">
+                <img src="images/Trazia_.svg" alt="TRAZIA Logo" class="nav-logo-img">
+            </a>
 
-        <!-- Enlaces centrados y alineados en una sola línea -->
-        <nav class="nav-menu" id="navMenu">
-            <ul class="nav-links">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#origen-rostro" class="nav-link">El Origen</a></li>
-                <li><a href="#enfoque" class="nav-link">Enfoque</a></li>
-                <li><a href="#recorrido" class="nav-link">Trazabilidad</a></li>
-                <li><a href="#venezuela" class="nav-link">Venezuela</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios B2B</a></li>
-                <li><a href="#comunidad" class="nav-link">Comunidad</a></li>
-                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
-            </ul>
-        </nav>
+            <!-- Enlaces centrados y alineados en una sola línea -->
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#origen-rostro" class="nav-link">El Origen</a></li>
+                    <li><a href="#enfoque" class="nav-link">Enfoque</a></li>
+                    <li><a href="#recorrido" class="nav-link">Trazabilidad</a></li>
+                    <li><a href="#venezuela" class="nav-link">Venezuela</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios B2B</a></li>
+                    <li><a href="#comunidad" class="nav-link">Comunidad</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
 
-        <!-- Botón empujado a la derecha -->
-        <div class="nav-actions">
-            <a href="#contacto" class="btn btn-gold">Hablemos</a>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <!-- Botón empujado a la derecha -->
+            <div class="nav-actions">
+                <a href="#contacto" class="btn btn-gold">Hablemos</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-    </div>
     </header>
 
     <main id="main-content">
@@ -397,26 +397,29 @@
                 </div>
 
                 <div class="contact-wrapper">
-                    <form class="contact-form" id="contactForm">
+                    <form action="https://formspree.io/f/mppwzapg" method="POST" class="contact-form" id="contactForm">
+                        <!-- ASUNTO PERSONALIZADO EN TU BANDEJA -->
+                        <input type="hidden" name="_subject" value="Nuevo contacto desde el sitio web TRAZIA ORIGIN">
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Nombre y apellido *</label>
-                                <input type="text" id="name" required placeholder="Tu nombre completo">
+                                <input type="text" id="name" name="nombre_completo" required placeholder="Tu nombre completo">
                             </div>
                             <div class="form-group">
                                 <label for="company">Empresa u organización</label>
-                                <input type="text" id="company" placeholder="Nombre de tu proyecto o tostaduría">
+                                <input type="text" id="company" name="empresa" placeholder="Nombre de tu proyecto o tostaduría">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="country">País *</label>
-                                <input type="text" id="country" required placeholder="País de residencia o actividad">
+                                <input type="text" id="country" name="pais" required placeholder="País de residencia o actividad">
                             </div>
                             <div class="form-group">
                                 <label for="role">Tipo de contacto *</label>
-                                <select id="role" required>
+                                <select id="role" name="perfil_contacto" required>
                                     <option value="" disabled selected>Selecciona tu perfil</option>
                                     <option value="productor">Productor / Caficultor</option>
                                     <option value="tostador">Tostador de café</option>
@@ -427,14 +430,16 @@
                             </div>
                         </div>
 
+                        <!-- CAMPO EMAIL -->
                         <div class="form-group">
                             <label for="email">Correo electrónico *</label>
-                            <input type="email" id="email" required placeholder="tucorreo@ejemplo.com">
+                            <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
                         </div>
 
+                        <!-- CAMPO MENSAJE -->
                         <div class="form-group">
                             <label for="message">Mensaje *</label>
-                            <textarea id="message" rows="4" required placeholder="Cuéntanos sobre tu interés, tu proyecto o cómo podemos colaborar..."></textarea>
+                            <textarea id="message" name="mensaje" rows="4" required placeholder="Cuéntanos sobre tu interés, tu proyecto o cómo podemos colaborar..."></textarea>
                         </div>
 
                         <div>
@@ -463,7 +468,7 @@
                         src="images/Trazia_.svg" 
                         alt="TRAZIA ORIGIN - Every origin has a story" 
                         class="footer-logo-img"
-                        style="height: 45px; width: auto; margin-bottom: 12px;"
+                        style="height: 38px; width: auto; margin-bottom: 8px;"
                     >
 
                     <p class="footer-tagline">
@@ -477,7 +482,7 @@
                     <!-- CONTACTO MEJORADO -->
                     <div 
                         class="footer-contact"
-                        style="margin-top: 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px;"
+                        style="margin-top: 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px;"
                     >
                         <span 
                             style="
@@ -506,8 +511,8 @@
                         >
                             <span 
                                 style="
-                                    width: 27px;
-                                    height: 27px;
+                                    width: 25px;
+                                    height: 25px;
                                     display: inline-flex;
                                     align-items: center;
                                     justify-content: center;
@@ -515,7 +520,7 @@
                                     border-radius: 4px;
                                     color: #C9A96B;
                                     flex-shrink: 0;
-                                    font-size: 14px;
+                                    font-size: 13px;
                                 "
                             >
                                 ✉
@@ -542,8 +547,8 @@
                         >
                             <span
                                 style="
-                                    width: 27px;
-                                    height: 27px;
+                                    width: 25px;
+                                    height: 25px;
                                     display: inline-flex;
                                     align-items: center;
                                     justify-content: center;
@@ -556,8 +561,8 @@
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
-                                    width="15"
-                                    height="15"
+                                    width="14"
+                                    height="14"
                                     fill="currentColor"
                                     aria-hidden="true"
                                 >
