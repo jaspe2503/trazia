@@ -927,7 +927,7 @@ img {
 .footer {
     background-color: var(--verde-profundo-dark);
     color: var(--crema-calido);
-    padding: 80px 0 40px 0;
+    padding: 25px 0 10px 0; /* <--- Cambia 35px por 25px */
     border-top: 1px solid rgba(201, 169, 107, 0.2);
 }
 
