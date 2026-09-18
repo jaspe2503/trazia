@@ -1633,7 +1633,7 @@ button {
     }
 
 
-    /* ---------------- HERO MÓVIL ---------------- */
+ /* ---------------- HERO MÓVIL ---------------- */
 
     .hero-section {
         min-height: auto;
@@ -1641,12 +1641,9 @@ button {
         padding-top: 90px;
         padding-bottom: 70px;
 
-        background-attachment: scroll !important;
-
-        background-size: cover !important;
-
-        background-position:
-            center center !important;
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
     }
 
     .hero-container {
