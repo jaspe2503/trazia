@@ -1004,75 +1004,668 @@ img {
 }
 
 /* ------------------ RESPONSIVE BREAKPOINTS ------------------ */
+/* =========================================================
+   TRAZIA — RESPONSIVE DESIGN
+   Desktop / Tablet / Mobile
+   ========================================================= */
+
+
+/* =========================================================
+   TABLETS
+   Hasta 1024px
+   ========================================================= */
+
 @media (max-width: 1024px) {
+
+    /* ---------- CONTENEDOR ---------- */
+
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .nav-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-link {
+        font-size: 0.82rem;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-section {
+        min-height: 80vh;
+        padding-top: 100px;
+        padding-bottom: 80px;
+
+        /* Evita problemas de fixed en tablets */
+        background-attachment: scroll;
+    }
+
+    .hero-container {
+        max-width: 900px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.8rem, 6vw, 4rem);
+    }
+
+
+    /* ---------- EL ORIGEN ---------- */
+
+    .rostro-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .rostro-card:last-child {
+        grid-column: 1 / -1;
+        max-width: calc(50% - 12px);
+        justify-self: center;
+    }
+
+    .rostro-img-wrap {
+        height: 280px;
+    }
+
+
+    /* ---------- NUESTRO ENFOQUE ---------- */
+
     .enfoque-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
     }
+
+
+    /* ---------- RECORRIDO ---------- */
+
     .journey-steps {
         grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
+        gap: 36px 24px;
     }
+
     .journey-steps::before {
         display: none;
     }
+
+
+    /* ---------- VENEZUELA ---------- */
+
     .venezuela-layout {
         grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+
+    /* ---------- SERVICIOS B2B ---------- */
+
+    .b2b-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+
+    /* ---------- BLOQUES DUALES ---------- */
+
+    .dual-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+
+    /* ---------- FORMULARIO ---------- */
+
+    .contact-wrapper {
+        max-width: 720px;
+        padding: 44px 36px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 35px;
     }
 }
 
+
+
+/* =========================================================
+   MÓVILES
+   Hasta 768px
+   ========================================================= */
+
 @media (max-width: 768px) {
+
+    /* =====================================================
+       GENERAL
+       ===================================================== */
+
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+       ===================================================== */
+
     .navbar {
         height: 72px;
     }
+
+    .nav-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nav-logo-img {
+        height: 40px;
+    }
+
     .nav-menu {
         position: fixed;
         top: 72px;
         left: 0;
+
         width: 100%;
+
         background-color: var(--blanco);
+
         border-bottom: 1px solid var(--borde-suave);
-        flex-direction: column;
-        padding: 30px 24px;
+
+        padding: 28px 20px;
+
         display: none;
+        flex-direction: column;
+
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+        z-index: 999;
     }
+
     .nav-menu.active {
         display: flex;
     }
+
     .nav-links {
-        flex-direction: column;
-        gap: 20px;
         width: 100%;
-        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
     }
+
+    .nav-link {
+        font-size: 0.95rem;
+        white-space: normal;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+
+    /* ---------- BOTÓN HAMBURGUESA ---------- */
+
     .mobile-toggle {
         display: flex;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 8px;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 5px;
+
+        background: transparent;
+
+        border: none;
+
+        cursor: pointer;
     }
+
+    .mobile-toggle span {
+        display: block;
+
+        width: 24px;
+        height: 2px;
+
+        background-color: var(--verde-profundo);
+
+        border-radius: 2px;
+
+        transition: var(--transition);
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero-section {
+        min-height: auto;
+
+        padding-top: 90px;
+        padding-bottom: 70px;
+
+        /*
+         * IMPORTANTE:
+         * En móviles no utilizamos background fixed.
+         */
+
+        background-attachment: scroll !important;
+
+        background-size: cover !important;
+
+        background-position: center center !important;
+    }
+
+    .hero-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-content {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .hero-badge {
+        font-size: 0.7rem;
+        letter-spacing: 0.09em;
+        line-height: 1.5;
+        padding: 6px 12px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.35rem, 10vw, 3.4rem);
+        line-height: 1.08;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.45;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        max-width: 100%;
+    }
+
+    .hero-actions {
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       TÍTULOS DE SECCIÓN
+       ===================================================== */
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 8vw, 2.7rem);
+        line-height: 1.2;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       EL ORIGEN
+       ===================================================== */
+
     .rostro-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 35px;
     }
+
+    .rostro-card:last-child {
+        grid-column: auto;
+        max-width: none;
+        justify-self: auto;
+    }
+
+    .rostro-img-wrap {
+        height: 240px;
+    }
+
+    .rostro-caption {
+        padding: 22px;
+    }
+
+
+    /* =====================================================
+       NUESTRO ENFOQUE
+       ===================================================== */
+
     .enfoque-grid {
         grid-template-columns: 1fr;
+        gap: 18px;
     }
+
+    .enfoque-card {
+        padding: 28px 24px;
+    }
+
+
+    /* =====================================================
+       RECORRIDO
+       ===================================================== */
+
+    .journey-container {
+        margin-top: 40px;
+    }
+
     .journey-steps {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
+
+    .journey-steps::before {
+        display: none;
+    }
+
+    .journey-step {
+        width: 100%;
+    }
+
+    .journey-node {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 16px;
+    }
+
+    .journey-title {
+        font-size: 1.1rem;
+    }
+
+    .journey-desc {
+        max-width: 300px;
+    }
+
+    .journey-callout {
+        margin-top: 40px;
+        padding: 20px;
+        font-size: 1.05rem;
+    }
+
+
+    /* =====================================================
+       VENEZUELA
+       ===================================================== */
+
+    .venezuela-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .venezuela-text {
+        gap: 18px;
+    }
+
+    .venezuela-text p {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .terruños-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .venezuela-image-wrap {
+        width: 100%;
+        max-height: none;
+    }
+
+    .venezuela-img {
+        width: 100%;
+        height: auto;
+        min-height: 250px;
+        object-fit: cover;
+    }
+
+
+    /* =====================================================
+       SERVICIOS B2B
+       ===================================================== */
+
     .b2b-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
+
+    .b2b-card {
+        padding: 30px 24px;
+    }
+
+    .b2b-card-title {
+        font-size: 1.3rem;
+    }
+
+
+    /* =====================================================
+       BLOQUES DUALES
+       ===================================================== */
+
     .dual-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
     }
+
+    .dual-card-img-wrap {
+        height: 220px;
+    }
+
+    .dual-card-body {
+        padding: 28px 24px;
+    }
+
+
+    /* =====================================================
+       SOBRE TRAZIA
+       ===================================================== */
+
+    .nosotros-content {
+        gap: 22px;
+    }
+
+    .nosotros-disclaimer {
+        padding: 20px;
+    }
+
+
+    /* =====================================================
+       FORMULARIO
+       ===================================================== */
+
+    .contact-wrapper {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .contact-form {
+        gap: 20px;
+    }
+
     .form-row {
         grid-template-columns: 1fr;
+        gap: 18px;
     }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .footer {
+        padding-top: 40px;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+        margin-bottom: 40px;
     }
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+
+
+/* =========================================================
+   TELÉFONOS PEQUEÑOS
+   Hasta 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .nav-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .nav-logo-img {
+        height: 36px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-section {
+        padding-top: 75px;
+        padding-bottom: 60px;
+
+        background-position: 58% center !important;
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+
+    /* ---------- SECCIONES ---------- */
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+
+    /* ---------- TARJETAS ---------- */
+
+    .rostro-img-wrap {
+        height: 220px;
+    }
+
+    .enfoque-card,
+    .b2b-card {
+        padding: 24px 20px;
+    }
+
+
+    /* ---------- BLOQUES DUALES ---------- */
+
+    .dual-card-img-wrap {
+        height: 200px;
+    }
+
+    .dual-card-body {
+        padding: 24px 20px;
+    }
+
+
+    /* ---------- FORMULARIO ---------- */
+
+    .contact-wrapper {
+        padding: 24px 16px;
+    }
+
+
+    /* ---------- BOTONES ---------- */
+
+    .hero-actions .btn {
+        width: 100%;
     }
 }
 /* --- DESTELLO PARA DESTACAR EL LOGO EN EL FOOTER --- */
