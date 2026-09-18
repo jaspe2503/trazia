@@ -1981,6 +1981,10 @@ button {
         background-position:
             58% center !important;
     }
+   .hero-section::before {
+        background-attachment: scroll !important;
+        position: absolute !important;
+      }
 
     .hero-container {
         padding-left: 18px;
